@@ -90,7 +90,7 @@ module.exports = function (RED) {
                             }
                             var opts = Object.assign(opts1,options);
                             if (outputs > 0) {
-                                opts.cellClick = function(e, cell) {
+                                opts.cellEdited = function(cell) {
                                     $scope.send({topic:cell.getField(),payload:cell.getData(),options:opts});
                                 };
                             }
